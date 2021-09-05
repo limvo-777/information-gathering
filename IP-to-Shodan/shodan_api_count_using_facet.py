@@ -8,6 +8,7 @@ FACETS = [
     ('country', 10),
     'city',
 ]
+# default 5 for a facet. If you want to see more than 5, you could do ('country', 1000) for example
 
 FACET_TITLES = {
     'country': 'Top 10 Countries',
@@ -19,7 +20,7 @@ FACET_TITLES = {
 try:
     api = shodan.Shodan(API_KEY)
 
-    query = 'query'
+    query = 'port:80'
 
     result = api.count(query, facets=FACETS)
 

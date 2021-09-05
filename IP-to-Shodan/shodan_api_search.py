@@ -7,7 +7,7 @@ API_KEY = API_K.key
 
 try:
     api = shodan.Shodan(API_KEY)
-    query = "qeury"
+    query = 'country:KR port:80'
     
     result = api.search(query)
     
